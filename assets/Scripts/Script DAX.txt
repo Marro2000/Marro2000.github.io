@@ -1,0 +1,41 @@
+Nombe de vue moyenne par video(M) = 
+VAR totalVue = SUM(vue_youtubeurs[nombre_de_vues])
+VAR totalVideo = SUM(vue_youtubeurs[nombre_de_videos])
+VAR moyenVueParVideo= DIVIDE(totalVue,totalVideo, BLANK())
+VAR moyenne = DIVIDE(moyenVueParVideo, 1000000, BLANK())
+
+RETURN moyenne
+
+Nombre d'abonnes (M) = 
+VAR million = 1000000
+VAR sommeAbonnes = SUM(vue_youtubeurs[nombre_d_abonnés])
+VAR totalAbonnes = DIVIDE(sommeAbonnes, million)
+
+RETURN totalAbonnes
+
+
+Nombre de videos = 
+VAR sommeVideo = SUM(vue_youtubeurs[nombre_de_videos])
+
+RETURN sommeVideo
+
+Nombre de vues par abonnés = 
+VAR totalVues= SUM(vue_youtubeurs[nombre_de_vues])
+VAR totalAbonnes = SUM(vue_youtubeurs[nombre_d_abonnés])
+Var vueParAbonnes = DIVIDE(totalVues, totalAbonnes, BLANK())
+
+RETURN vueParAbonnes
+
+Nombre de vues(Mrd) = 
+VAR milliard = 1000000000
+VAR somme_des_vues = SUM(vue_youtubeurs[nombre_de_vues])
+VAR nbr_total_vues = DIVIDE(somme_des_vues, milliard)
+
+RETURN nbr_total_vues
+
+Réactivité des abonnés = 
+VAR totalVideos = SUM(vue_youtubeurs[nombre_de_videos])
+VAR totalAbonnes = SUM(vue_youtubeurs[nombre_d_abonnés])
+VAR ratio = DIVIDE(totalAbonnes, totalVideos, BLANK())
+
+RETURN ratio
