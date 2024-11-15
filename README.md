@@ -12,11 +12,21 @@ Créer un tableau de bord fournissant les insights sur les chaines YouTube les p
 - Le nombre de vidéos, et
 - L'engagement communautaire
 
+# Les outils et technologies utilisés
+
+| Outil      | But                                                 |
+| ---------- | --------------------------------------------------- |
+| Excel      | Exploration des données                             |
+| Python      |Bibliotheque Pandas pour enrichir le jeu de données à l'aide de l'API de YouTube                            |
+| SQL Server | Nettoyage, test, et analyse des données             |
+| Power BI   | Visualisation des données via un dashord interactif |
+| GitHub     | Hebergelent du projet et du rapport                 |
+
 # Source du jeu de données
 
 - D'où proviennent les données?
-  Les données initiales proviennent de Kaggle, sous forme d’un extrait Excel, [Disponipble ic.](https://www.kaggle.com/datasets/bhavyadhingra00020/top-100-social-media-influencers-2024-countrywise?resource=download). Elles ont ensuite été enrichies à l'aide de l'API de YouTube.
-
+- Les données initiales proviennent de Kaggle, sous forme d’un extrait Excel, [Disponipble ic.](https://www.kaggle.com/datasets/bhavyadhingra00020/top-100-social-media-influencers-2024-countrywise?resource=download). Elles ont ensuite été enrichies à l'aide de l'API de YouTube.
+  
 # Les etapes
 
 - Collecte des données
@@ -27,28 +37,15 @@ Créer un tableau de bord fournissant les insights sur les chaines YouTube les p
 - Visualiser les données
 - Rediger la documentation
 
-## Les outils
+## Exploration des données
 
-| Outil      | But                                                 |
-| ---------- | --------------------------------------------------- |
-| Excel      | Exploration des données                             |
-| SQL Server | Nettoyage, test, et analyse des données             |
-| Power BI   | Visualisation des données via un dashord interactif |
-| GitHub     | Hebergelent du projet et du rapport                 |
-
-# Development
-
-## Data exploration notes
-
-A cette etape de l'analysis voici les observations qui ont été faites:
-
-- What are your initial observations with this dataset? What's caught your attention so far?
+A cette etape de l'analyse voici les observations qui ont été faites:
 
 1. Les colonnes dont on a besoin pour faire l'analyse sont au nombre de 4 et elles sont toutes presentes
 2. La première colonne(Name) semble contenir des identifiants de chaînes, séparés par un symbole @. Nous devons extraire les noms des chaînes à partir de ces données.
 3. Le jeu de données contient plus d’informations que nécessaire, il faudra donc supprimer les colonnes superflues.
 
-## Data cleaning
+## Nettoyage des données
 
 L’objectif est d’affiner notre jeu de données pour qu’il soit bien structuré, complet et prêt pour l’analyse.
 
@@ -58,7 +55,7 @@ Les données nettoyées doivent respecter les critères et contraintes suivants 
 - Cohérence : Les types de données doivent être adaptés au contenu de chaque colonne (par exemple, les colonnes numériques ne doivent pas contenir de texte, et les dates doivent suivre un format standard).
 - Complétude : Aucune colonne ne doit contenir de valeurs nulles, afin de garantir des informations complètes pour chaque enregistrement.
 
-- Processus de nettoyage du jeu de données
+### Processus de nettoyage du jeu de données
 
 1. Selectionner les colonnes necessaires pour la suite
 2. Extraire le non des chaines dans la premiere colonne
@@ -68,7 +65,7 @@ Les données nettoyées doivent respecter les critères et contraintes suivants 
 
 ```sql
 /*
-# 1. Ne conserver que les donn�es pertinantes pour la suite
+# 1. Ne conserver que les données pertinantes pour la suite
 # 2. Extraction du nom de la chaine
 # 3. Renommer les chaines
 # 4. Créer une vue
