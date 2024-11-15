@@ -14,6 +14,7 @@ Créer un tableau de bord fournissant les insights sur les chaines YouTube les p
 
 # Les outils et technologies utilisés
 
+
 | Outil      | But                                                 |
 | ---------- | --------------------------------------------------- |
 | Excel      | Exploration des données                             |
@@ -21,6 +22,7 @@ Créer un tableau de bord fournissant les insights sur les chaines YouTube les p
 | SQL Server | Nettoyage, test, et analyse des données             |
 | Power BI   | Visualisation des données via un dashord interactif |
 | GitHub     | Hebergelent du projet et du rapport                 |
+
 
 # Source du jeu de données
 
@@ -157,9 +159,9 @@ HAVING
 
 # Visualisation des données
 
-## Resultats
+ Resultats
 
-![Power BI Dashboard](assets/images/dashbord_vf.png)
+![Power BI Dashboard](assets/images/Dashbord_vf.png)
 
 ## Mesures DAX
 
